@@ -1,3 +1,4 @@
 node_modules
 tfstate*
+npm-debug.log
 
