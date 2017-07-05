@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 7.10.0
+
+dependencies:
+  pre:
+  - npm config set proxy http://$PROXY_USERNAME:$PROXY_PASSWORD@proxy.kdc.capitalone.com:8099
+  - wget https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip
+  - unzip terraform_0.9.11_linux_amd64.zip
+
+test:
+  override:
+    -npm test
+
+  
